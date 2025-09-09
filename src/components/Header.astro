@@ -4,26 +4,34 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+        <nav>
+                <h2><a href="/"><img src="https://www.zumba.com/img/blt/zumba-logo.svg" alt="Zumba logo" class="logo" /> {SITE_TITLE}</a></h2>
+                <div class="internal-links">
                         <HeaderLink href="/">Home</HeaderLink>
+                        <HeaderLink href="/classes">Classes</HeaderLink>
+                        <HeaderLink href="/locations/murwillumbah">Location</HeaderLink>
                         <HeaderLink href="/about">About</HeaderLink>
                         <HeaderLink href="#contact">Contact</HeaderLink>
                 </div>
-	</nav>
+        </nav>
 </header>
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
+        header {
+                margin: 0;
+                padding: 0 1em;
+                background: white;
+                box-shadow: 0 2px 8px rgba(var(--black), 5%);
+        }
+        h2 {
+                margin: 0;
+                font-size: 1em;
+        }
+
+        .logo {
+                height: 40px;
+                vertical-align: middle;
+                margin-right: 0.5em;
+        }
 
 	h2 a,
 	h2 a.active {

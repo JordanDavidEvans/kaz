@@ -1,0 +1,25 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+
+const pageTitle = `${SITE_TITLE} – Murwillumbah Location`;
+---
+
+<!doctype html>
+<html lang="en">
+        <head>
+                <BaseHead title={pageTitle} description="Find our Zumba classes in Murwillumbah." />
+        </head>
+        <body>
+                <Header />
+                <main>
+                        <h1>Murwillumbah Location</h1>
+                        <p>Classes are held at the Murwillumbah Community Centre, 2 Tumbulgum Rd, Murwillumbah NSW 2484.</p>
+                        <p>Contact <a href="tel:+61422233836">0422 233 836</a> for timetable and booking information.</p>
+                </main>
+                <Footer />
+        </body>
+</html>
+
