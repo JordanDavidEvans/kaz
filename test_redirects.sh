@@ -3,7 +3,6 @@ set -e
 base="https://kazumbah.com.au"
 
 declare -A map=(
-  ["/"]="/"
   ["/zumba-dance-classes/"]="/zumba-classes/"
   ["/zumba-for-seniors/"]="/zumba-for-seniors/"
   ["/top-10-fun-activities-for-fitness-in-murwillumbah/"]="/blog/fitness-activities-murwillumbah/"
