@@ -4,6 +4,15 @@ const today = new Date();
 
 <footer>
         &copy; {today.getFullYear()} Kazumbah Zumba with Kaz. All rights reserved.
+        <nav class="footer-links">
+                <a href="/zumba-classes-murwillumbah/">Classes</a>
+                <a href="/timetable/">Timetable</a>
+                <a href="/zumba-for-beginners/">Beginners</a>
+                <a href="/zumba-for-seniors/">Seniors</a>
+                <a href="/zumba-for-weight-loss/">Weight Loss</a>
+                <a href="/blog/best-zumba-classes-murwillumbah/">Best Classes</a>
+                <a href="/blog/fitness-activities-murwillumbah/">Fitness Activities</a>
+        </nav>
         <p id="contact">Call <a href="tel:+61422233836">0422 233 836</a>, email <a href="mailto:info@kazumbah.com.au">info@kazumbah.com.au</a>, or follow us on <a href="https://www.facebook.com/p/Kazumbah-Murwillumbah-Zumba-with-Kaz-100057742846960/" rel="noopener">Facebook</a></p>
 </footer>
 <style>
@@ -12,6 +21,14 @@ const today = new Date();
                 background: linear-gradient(var(--gray-gradient)) no-repeat;
                 color: rgb(var(--gray));
                 text-align: center;
+        }
+        .footer-links a {
+                margin: 0 0.5em;
+                color: rgb(var(--gray));
+                text-decoration: none;
+        }
+        .footer-links a:hover {
+                color: rgb(var(--gray-dark));
         }
         #contact a {
                 text-decoration: none;

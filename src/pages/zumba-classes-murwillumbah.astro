@@ -1,0 +1,84 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Zumba Classes in Murwillumbah — Timetable & Prices | Kazumbah';
+const description = 'Find local Zumba classes in Murwillumbah. See our timetable, prices and book your first class for free.';
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kazumbah.com.au/"},
+    {"@type": "ListItem", "position": 2, "name": "Zumba Classes in Murwillumbah", "item": "https://kazumbah.com.au/zumba-classes-murwillumbah/"}
+  ]
+};
+
+const events = [{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Morning Zumba",
+  "startDate": "2025-06-01T09:00:00+10:00",
+  "endDate": "2025-06-01T10:00:00+10:00",
+  "location": {
+    "@type": "Place",
+    "name": "Murwillumbah Community Centre",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nullum St",
+      "addressLocality": "Murwillumbah",
+      "addressRegion": "NSW",
+      "postalCode": "2484",
+      "addressCountry": "AU"
+    }
+  },
+  "offers": {"@type": "Offer", "price": "10", "priceCurrency": "AUD"}
+}, {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Evening Zumba",
+  "startDate": "2025-06-03T18:00:00+10:00",
+  "endDate": "2025-06-03T19:00:00+10:00",
+  "location": {
+    "@type": "Place",
+    "name": "Murwillumbah Community Centre",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nullum St",
+      "addressLocality": "Murwillumbah",
+      "addressRegion": "NSW",
+      "postalCode": "2484",
+      "addressCountry": "AU"
+    }
+  },
+  "offers": {"@type": "Offer", "price": "10", "priceCurrency": "AUD"}
+}];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+    <script type="application/ld+json">{JSON.stringify(events)}</script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Zumba Classes in Murwillumbah — Timetable & Prices</h1>
+      <p>Join our fun Zumba sessions at the Murwillumbah Community Centre. <a href="/timetable/">Check the full timetable</a> or see upcoming classes below.</p>
+      <h2>Timetable</h2>
+      <table>
+        <tr><th>Day</th><th>Time</th></tr>
+        <tr><td>Monday</td><td>9:00am</td></tr>
+        <tr><td>Wednesday</td><td>6:00pm</td></tr>
+      </table>
+      <h2 id="pricing">Prices</h2>
+      <p>$10 per class – first class free. Multi-class passes available on request.</p>
+      <h2>Find Us</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d-28.327!2d153.395!3d-28.327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sMurwillumbah%20Community%20Centre!5e0!3m2!1sen!2sau!4v00000000000" width="100%" height="300" loading="lazy" title="Map"></iframe>
+      <p>Plenty of street parking is available. <a href="/zumba-for-beginners/">New to Zumba?</a> Read our beginner guide or see <a href="/zumba-for-seniors/">classes for seniors</a>.</p>
+    </main>
+    <Footer />
+  </body>
+</html>

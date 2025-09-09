@@ -1,0 +1,56 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Zumba for Beginners — Start Here | Kazumbah Zumba';
+const description = 'New to Zumba? Learn what to wear, what to bring and how to enjoy your first class in Murwillumbah.';
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kazumbah.com.au/"},
+    {"@type": "ListItem", "position": 2, "name": "Zumba for Beginners", "item": "https://kazumbah.com.au/zumba-for-beginners/"}
+  ]
+};
+
+const faq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What should I wear to my first class?", "acceptedAnswer": {"@type": "Answer", "text": "Comfortable workout clothes and sneakers."}},
+    {"@type": "Question", "name": "Do I need dance experience?", "acceptedAnswer": {"@type": "Answer", "text": "No, classes are paced for all levels."}}
+  ]
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+    <script type="application/ld+json">{JSON.stringify(faq)}</script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Zumba for Beginners — Start Here</h1>
+      <p>Feeling nervous? Our friendly community will help you get moving at your own pace. See the <a href="/timetable/">timetable</a> or explore <a href="/zumba-for-seniors/">low-impact options</a>.</p>
+      <h2>What to Bring</h2>
+      <p>Water bottle, towel and a smile.</p>
+      <h2>What to Wear</h2>
+      <p>Lightweight clothes and supportive shoes.</p>
+      <h2>First-Class Tips</h2>
+      <p>Arrive 10 minutes early to meet the instructor and find your spot.</p>
+      <h2>FAQs</h2>
+      <dl>
+        <dt>What should I wear to my first class?</dt>
+        <dd>Comfortable workout clothes and sneakers.</dd>
+        <dt>Do I need dance experience?</dt>
+        <dd>No, classes are paced for all levels.</dd>
+      </dl>
+      <p>Ready to try? View our <a href="/zumba-classes-murwillumbah/">class details and pricing</a>.</p>
+    </main>
+    <Footer />
+  </body>
+</html>
