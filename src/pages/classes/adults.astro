@@ -1,0 +1,24 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+
+const pageTitle = `${SITE_TITLE} – Adults Class`;
+---
+
+<!doctype html>
+<html lang="en">
+        <head>
+                <BaseHead title={pageTitle} description="High-energy Zumba sessions for adults." />
+        </head>
+        <body>
+                <Header />
+                <main>
+                        <h1>Adults Zumba</h1>
+                        <p>Our adult classes deliver a full-body workout with exhilarating Latin-inspired moves. All fitness levels are welcome and no dance experience is required.</p>
+                </main>
+                <Footer />
+        </body>
+</html>
+
