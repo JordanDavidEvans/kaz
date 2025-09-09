@@ -15,7 +15,14 @@ const structuredData = {
     "addressRegion": "NSW",
     "addressCountry": "AU"
   },
-  "telephone": "+61-422-233-836"
+    "telephone": "+61-422-233-836"
+};
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kazumbah.com.au/"}
+  ]
 };
 ---
 
@@ -24,6 +31,7 @@ const structuredData = {
         <head>
                 <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+                <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
         </head>
         <body>
                 <Header />

@@ -1,0 +1,54 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Zumba for Seniors — Low-Impact Classes | Kazumbah Zumba';
+const description = 'Gentle, low-impact Zumba classes for seniors in Murwillumbah. Safety tips, accessibility and instructor qualifications.';
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kazumbah.com.au/"},
+    {"@type": "ListItem", "position": 2, "name": "Zumba for Seniors", "item": "https://kazumbah.com.au/zumba-for-seniors/"}
+  ]
+};
+
+const faq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is Zumba safe for seniors?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, our sessions are low-impact and can be modified."}},
+    {"@type": "Question", "name": "Do I need special shoes?", "acceptedAnswer": {"@type": "Answer", "text": "Supportive sneakers are recommended."}}
+  ]
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+    <script type="application/ld+json">{JSON.stringify(faq)}</script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Zumba for Seniors</h1>
+      <p>Our <a href="/timetable/">Active Older Adults classes</a> keep you moving safely. Instructors hold current certifications and adapt moves for all abilities.</p>
+      <h2>Low-Impact Focus</h2>
+      <p>Gentle choreography protects joints while still raising the heart rate.</p>
+      <h2>Accessibility</h2>
+      <p>The venue is flat-floor with accessible bathrooms and parking.</p>
+      <h2>FAQs</h2>
+      <dl>
+        <dt>Is Zumba safe for seniors?</dt>
+        <dd>Yes, sessions are low-impact and can be modified.</dd>
+        <dt>Do I need special shoes?</dt>
+        <dd>Supportive sneakers are recommended.</dd>
+      </dl>
+      <p>New to classes? See our <a href="/zumba-for-beginners/">beginner guide</a> or check the <a href="/zumba-classes-murwillumbah/">class details</a>.</p>
+    </main>
+    <Footer />
+  </body>
+</html>

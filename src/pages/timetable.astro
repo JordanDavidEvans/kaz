@@ -1,0 +1,57 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Class Timetable | Kazumbah Zumba';
+const description = 'Weekly schedule for Zumba classes in Murwillumbah. Download the timetable or book your next class.';
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kazumbah.com.au/"},
+    {"@type": "ListItem", "position": 2, "name": "Timetable", "item": "https://kazumbah.com.au/timetable/"}
+  ]
+};
+
+const events = [{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Morning Zumba",
+  "startDate": "2025-06-01T09:00:00+10:00",
+  "endDate": "2025-06-01T10:00:00+10:00",
+  "location": {"@type": "Place", "name": "Murwillumbah Community Centre"},
+  "offers": {"@type": "Offer", "price": "10", "priceCurrency": "AUD"}
+}, {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Evening Zumba",
+  "startDate": "2025-06-03T18:00:00+10:00",
+  "endDate": "2025-06-03T19:00:00+10:00",
+  "location": {"@type": "Place", "name": "Murwillumbah Community Centre"},
+  "offers": {"@type": "Offer", "price": "10", "priceCurrency": "AUD"}
+}];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+    <script type="application/ld+json">{JSON.stringify(events)}</script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Class Timetable</h1>
+      <p>Download the <a href="/timetable.ics">ICS calendar</a> or <a href="#contact">contact us</a> to reserve your spot.</p>
+      <table>
+        <tr><th>Day</th><th>Time</th><th></th></tr>
+        <tr><td>Monday</td><td>9:00am</td><td><a href="#contact">Book</a></td></tr>
+        <tr><td>Wednesday</td><td>6:00pm</td><td><a href="#contact">Book</a></td></tr>
+      </table>
+      <p>See <a href="/zumba-classes-murwillumbah/">class details and pricing</a>.</p>
+    </main>
+    <Footer />
+  </body>
+</html>
